@@ -1,47 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PWJ Netflix Clone</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <img src="assets/logo.png" alt="" />
-      </div>
-      <div class="profile">
-        <img src="assets/profile__logo.png" alt="" />
-        <div class="dropdown-container">
-          <div class="dropdown">
-            <span onclick="logOut()">Sign out</span>
-          </div>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Online Streaming Website</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='test.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+</head>
+<body onload="slider()">
+    <div class="banner">
+        <div class="slider">
+            <img src="images/poster1.jpg" alt="background-img" id="slide-img">
         </div>
-      </div>
-    </header>
-    <main>
-      <div class="featured">
-       <img src="/homepage images/MovieName.png" alt="moviename">
-        <h4><img src="/homepage images/Top10Badge.png" alt="badge"> Türkiye’de Bugün 4 Numara</h4>
-        <div class="featured__buttons">
-          <button class="button__play"><i class="fas fa-play"></i>Oynat</button>
-          <button>Daha Fazla Bilgi</button>
-        </div>
-        <div class="featured__description">
-            Türkiye’de Bugün 4 Numara
-            Küçük yaşta başının çaresine bakmayı öğrenen ve çok çalışarak iş dünyasında önemli bir konuma gelen Emir, bir gün sokak şarkıcısı bir kızla karşılaşır ve hayatı değişir.
-            Oynat
-            Daha Fazla Bilgi
-            <div class="movies">
-                <div class="movies__header">
-                  <h5>Netflix'te Popüler</h5>
+        <div class="overlay">
+            
+            <header>
+                <div class="container">
+                    <nav>
+                        <div class="logo">
+                            <a href="#home"><img src="images/Flixia logo.PNG" width="120"></a>
+                        </div>
+                        <ul id="sidemenu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a class="btn1 btn-login">Login</a></li>
+                        <i class="fas fa-times closeMenu"></i>
+                        </ul>
+
+                        <div id="form-wrapper" class="form-wrapper1">
+
+                            <form class="form-content">
+                                <div class="imgcontainer">
+                                <span class="close">&times;</span>
+                                </div>
+                    
+                                <div class="form-container">
+                                <label for="uname"><b>Username</b></label>
+                                <input type="email" placeholder="Email address" name="email" class="login" required>
+                    
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="password" required>
+                                    
+                                <button type="submit" class="submit login-btn">Login</button>
+                                <label>
+                                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                                </label>
+                                </div>
+                    
+                                <div class="form-end-container">
+                                    <button type="button" class="cancelbtn login-btn">Cancel</button>
+                                    <span class="frgt">Forgot <a href="#">password?</a></span>
+                                </div>
+                            </form>
+                    </div>
+                    </nav>
                 </div>
-                <div id="wishlist" class="movies__container">
-                    <img src="/homepage images/MoviePoster (1).png" alt="">
+            </header>
+            <!-- Hero section -->
+            <div id="home">
+                <div class="container">
+                    <div class="row-1">
+                        <div class="wrap-el js-scroll">
+                            <h1 class="top-header">Unlimited movies, TV <br>shows, and more.</h1>
+                            <h2>Download anywhere. Watch anytime.</h2>
+                            <p class="top-description">Ready to watch? Enter your email to create or restart your membership.</p>
+                            <form>
+                                <input type="email" name="Email" placeholder="Email address" id="sign-up" class="js-scroll" required>
+                                <button type="submit" class="btn btn-get-started js-scroll">Sign Up<i class="fas fa-chevron-right"></i></button>
+                            </form>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
-      </div>
-     
-  </body>
+
+            <!-- Hero section end -->
+        </div>
+    </div>
+    <!-- About Netflix -->
+    <div id="about-us">
+        <div class="container padder">
+            <div class="row">
+                <div class="about-col-1 js-scroll">
+                    <h2>Enjoy On Your TV</h2>
+                    <p class="description">Enjoy Your Favourite TV shows and Movies on 
+                    Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
+                    </p>
+                </div>
+                <div class="about-col-2 js-scroll">
+                    <img src="landingPage Images/RICHIE (6).png" alt="tv">
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="about-col-2 js-scroll reorderd-to-col-2">
+                    <img src="landingPage Images/Frame.png" alt="mobile app">
+                </div>
+                <div class="about-col-1 js-scroll reorderd-to-col-1">
+                    <h2>Download your shows to watch offline.</h2>
+                    <p class="description">
+                        Save your favorites easily and always have something to watch.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="about-col-1 js-scroll">
+                    <h2>Watch everywhere.</h2>
+                    <p class="description">Stream unlimited movies and TV shows on your phone, 
+                        tablet, laptop, and TV without paying more.
+                    </p>
+                </div>
+                <div class="about-col-2 js-scroll">
+                    <img src="landingPage Images/RICHIE (4).png" alt="tv">
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="about-col-2 js-scroll">
+                    <img src="landingPage Images/Rectangle.png" alt="mobile app">
+                </div>
+                <div class="about-col-1 js-scroll">
+                    <h2>Create profiles for kids.</h2>
+                    <p class="description">
+                        Send kids on adventures 
+                        with their favorite characters in a space made just for them—free with your membership.
+                    </p>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <!-- About felixi end -->
+    
+    <!-- FAQ Section -->
+    <aside id="faq">
+        <div class="container">
+            <div class="row-1 faq-row js-scroll">
+                <h1>Frequently Asked Questions</h1>
+                <div class="accordion">
+                    <div class="accordion-question">
+                      <p>What is Netflix??</p>
+                
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-question">
+                      <p>How much does Netflix cost?</p>
+                
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-question">
+                      <p>Where can I watch?</p>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-question">
+                      <p>What can I watch on Netflix?</p>
+                
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-question">
+                      <p>Is Netflix good for kids?</p>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-question">
+                      <p>How can I cancel?</p>
+                    </div>
+                </div>
+                <p class="top-description top-description2">Ready to watch? Enter your email to create or restart your membership.</p>
+                        <form>
+                            <input type="email" name="Email" placeholder="Email address" id="sign-up" required>
+                            <button type="submit" class="btn btn-get-started">Get Started<i class="fas fa-paper-plane"></i></button>
+                        </form>
+            </div>
+        </div>
+    </aside>
+    <!-- FAQ Section End -->
+    <!-- Footer -->
+    <div id="footer">
+        <div class="container">
+            <div class="row wrapper">
+                <div class=" col-1 logo">
+                    <a href="#home"><img src="images/Flixia logo.PNG" width="120"></a>
+                    <p>help@flixia.com<i class="fas fa-paper-plane"></i></p>
+                </div>
+                <div class="col-2">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#about-us">What We Do</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <ul>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <ul>
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Ways to Watch</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+</body>
 </html>
