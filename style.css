@@ -105,7 +105,7 @@ nav ul li a{
 
 nav ul li a.btn1{
     padding: 8px 16px;
-    background: var(--main-color);
+    background: #E50914;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -125,9 +125,6 @@ nav ul li a:hover:after{
     width: 100%;
 }
 
-nav .fas{
-    display: none;
-}
 /* Nav/Header styles End */
 
 /* Hero Section Styles */
@@ -149,45 +146,45 @@ nav .fas{
 }
 
 .row-1 h2{
-    color: #f7bd4f;
+    color: var(--main-color);
     font-size: 26px;
     font-weight: 500;
     margin-bottom: 25px;
 }
 
 .row-1 .top-description{
-    color: #f7bd4f;
+    color: var(--main-color);
     font-size: 20px;
 }
 
 form #sign-up{
     display: inline-block;
-    border: 2px solid #ccc;
+    /* border: 1px solid #8C8C8C; */
     outline: none;
-    padding: 18px 16px;
+    padding: 16px 16px;
     margin-top: 12px;
-    color: #262626;
-    font-size: 18px;
-    border-radius: 5px;
+    color: #8c8c8c;
+    font-size: 1em;
 }
 
 form .btn {
     display: inline-block;
     padding: 18px 16px;
-    border-radius: 5px;
-    color: #f7bd4f;
+    border-radius: 0 5px 5px 0;
+    color: var(--main-color);
     border: none;
+    font-size: 1em;
     margin-top: 12px;
+    margin-left: -0.29em;
   }
   
   .btn-get-started {
-    font-size: 18px;
-    background-color: #063970;
+    background-color: #E50914;
     transition: color 0.3s ease-out;
   }
   
   .btn-get-started:hover {
-    color: #fff;
+    color: #f1f1f1;
   }
   
   .btn-get-started:hover > i {
@@ -213,6 +210,7 @@ form .btn {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 18px;
+    text-align: justify;
 }
 
 hr{
@@ -234,7 +232,7 @@ hr{
 
 .description{
     font-size: 20px;
-    color: #262626;
+    color: var(--main-color);
 }
 
 .about-col-2{
@@ -243,9 +241,13 @@ hr{
     /*position: relative;*/
 }
 
-.about-col-2 img{
+.about-col-2 img {
     width: 100%;
     transform: scale(1.2);
+}
+
+.about-col-2 .kids{
+  transform: scale(1.0);
 }
 
 /* About Section End */
@@ -266,7 +268,7 @@ hr{
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background: #f2f1f1;
+    background: #303030;
     border-radius: 10px;
     width: 50%;
     text-align: left;
@@ -275,7 +277,7 @@ hr{
 .accordion::before {
     content: '\02795'; 
     font-size: 13px;
-    color: #777;
+    color: #ffffff;
     float: right;
     margin-left: 5px;
 }
@@ -290,27 +292,8 @@ hr{
     font-size: 20px;
 }
 
-.accordion-answer p{
-    margin: 5px;
-    padding: 10px;
-    font-size: large;
-    color: #063970;
-    background: #ddd;
-    border-radius: 10px; 
-    line-height: 30px;
-    font-size: 18px;
-}
-
 .accordion:hover{
     cursor: pointer;
-}
-
-.accordion-answer {
-    display: none;
-} 
-
-.accordion.active .accordion-answer {
-    display: block;
 }
 
 .top-description2{
@@ -375,7 +358,7 @@ button:hover {
 .cancelbtn, .submit {
     width: auto;
     padding: 10px 18px;
-    background-color: #f44336;
+    background-color: #E50914;
 }
 
 /* Extra styles for the submit button */
