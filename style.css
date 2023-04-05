@@ -477,6 +477,14 @@ span.frgt a{
     }
 
     /* Scroll Animation Styles */
+    @keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 .js-scroll{
     opacity: 0;
@@ -492,14 +500,6 @@ span.frgt a{
     animation: fade-in 1s ease-in-out both;
 }
 
-@keyframes fade-in {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
 
 /* Scroll Animation Styles End */
 
